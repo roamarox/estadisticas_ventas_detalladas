@@ -6,7 +6,7 @@ source('src/subir_hdfs.R')
 pais <- 'br'
 mes <- '202205'
 
-productos <- Dimensiones::ObtenerProductos2(pemp_codigo = Dimensiones::EmpresaPrueba(pais), proyeccion = ' "Categoria", "Proveedor"')
+productos <- Dimensiones::ObtenerProductos2(pais = pais, pemp_codigo = Dimensiones::EmpresaPrueba(pais), proyeccion = ' "Categoria", "Proveedor"')
 setDT(productos)
 
 geo_canal <- Dimensiones::ObtenerGrillaGeoCanalDefault(pais, lista = T)
